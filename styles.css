@@ -1,0 +1,111 @@
+body {
+  font-family: 'Barlow Semi Condensed';
+  background-color:  hsl(210, 46%, 95%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  display: grid;
+  margin: 7rem 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+  grid-gap: 1.8rem;
+  max-width: 1300px;
+}
+.review-bubble {
+  width: auto;
+  border-radius: .5rem;
+  box-shadow: 0 0 20px 5px lightgray;
+  box-sizing: border-box;
+}
+.bubble-content {
+  margin: 35px;
+}
+.bubble-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "selfie name"
+    "selfie verified";
+  column-gap: 1rem;
+  font-size: 15px;
+}
+.bubble-name {
+  grid-area: name;
+}
+.bubble-verified {
+  grid-area: verified;
+  opacity: 0.6;
+}
+.review-title {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+.review-text {
+  opacity: 0.6;
+  line-height: 1.4;
+}
+.images {
+  border-radius: 50%;
+  grid-area: selfie;
+  border: 2px solid hsl(0, 0%, 81%);
+  max-width: 2em;
+  max-height: 2em;
+}
+#daniel {
+  background: url("images/bg-pattern-quotation.svg") right 100px top no-repeat;
+  background-color: hsl(263, 55%, 52%);
+  color: white;
+  grid-area: daniel;
+}
+#jonathan {
+  background-color: hsl(217, 19%, 35%);
+  color: white;
+  grid-area: jonathan;
+}
+#jeanette {
+  background-color: white;
+  color: hsl(217, 19%, 35%);
+  grid-area: jeanette;
+}
+#patrick {
+  background-color: hsl(219, 29%, 14%);
+  color: white;
+  grid-area: patrick;
+}
+#kira {
+  background-color: white;
+  color: hsl(217, 19%, 35%);
+  grid-area: kira;
+}
+/*For our mobile friends*/
+@media only screen and (max-width: 950px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "daniel"
+      "daniel"
+      "jonathan"
+      "jeanette"
+      "patrick"
+      "patrick"
+      "kira";
+  max-width: 450px;
+  }
+}
+/*Thank you Frontend Mentor*/
+.attribution {
+  color: lightgray;
+  font-size: 10px;
+  text-align: center;
+}
+.attribution a {
+  color: lightgray;
+  text-decoration: none;
+}
