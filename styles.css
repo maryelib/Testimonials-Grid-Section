@@ -30,16 +30,16 @@ body {
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    "selfie name"
-    "selfie verified";
+    "images bubble-name"
+    "images bubble-verified";
   column-gap: 1rem;
   font-size: 15px;
 }
 .bubble-name {
-  grid-area: name;
+  grid-area: bubble-name;
 }
 .bubble-verified {
-  grid-area: verified;
+  grid-area: bubble-verified;
   opacity: 0.6;
 }
 .review-title {
@@ -52,7 +52,7 @@ body {
 }
 .images {
   border-radius: 50%;
-  grid-area: selfie;
+  grid-area: images;
   border: 2px solid hsl(0, 0%, 81%);
   max-width: 2em;
   max-height: 2em;
